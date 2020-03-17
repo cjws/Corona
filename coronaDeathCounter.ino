@@ -6,8 +6,8 @@ LedControl lc=LedControl(12,11,10,1);
 // pin 11 is connected to the CLK pin
 // pin 10 is connected to the CS pin
 // 1 as we are only using 1 MAX7219
-long int deathCount = 7177;
-long int casesCount = 183657;
+long int deathCount = 7178;
+long int casesCount = 183809;
 
 
 
@@ -15,7 +15,7 @@ void setup()
 {
   // the zero refers to the MAX7219 number, it is zero for 1 chip
   lc.shutdown(0,false);// turn off power saving, enables display
-  lc.setIntensity(0,6);// sets brightness (0~15 possible values)
+  lc.setIntensity(0,1);// sets brightness (0~15 possible values)
   lc.clearDisplay(0);// clear screen
 }
 
@@ -37,9 +37,7 @@ void displayNumber(long int count)
   lc.clearDisplay(0);// clear screen
   int i;
   int numberArray[i];
-
   i = 0;
-
 
   /* extract and write each digit */
   while (count != 0)

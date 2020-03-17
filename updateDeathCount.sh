@@ -2,18 +2,11 @@
 source /home/chris/.bashrc
 DIR="/home/chris/Documents/coronaDeathCounter"
 cd /home/chris/Documents/coronaDeathCounter
-pwd
-# deathCount=$(python $DIR/coronaCount.py)
+
 coronaArray=()
 while read line ; do
   coronaArray+=($line)
 done < <(python $DIR/coronaCount.py)
-echo ${coronaArray[0]}
-echo ${coronaArray[1]}
-
-# echo $deathCount
-# count=$(python testCorona.py)
-# count=501
 
 printf "Web scrape finished.\nCases: "$coronaArray[0]"\nDeaths: "$coronaArray[1]"\n"
 

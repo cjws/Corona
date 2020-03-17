@@ -1,0 +1,2 @@
+N="/coronaDeathCounter"
+BOARD="arduino:avr:uno"
