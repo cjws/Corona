@@ -6,8 +6,8 @@ LedControl lc=LedControl(12,11,10,1);
 // pin 11 is connected to the CLK pin
 // pin 10 is connected to the CS pin
 // 1 as we are only using 1 MAX7219
-long int deathCount = 7178;
-long int casesCount = 183809;
+long int deathCount = 8970;
+long int casesCount = 219351;
 
 
 
@@ -22,14 +22,14 @@ void setup()
 void displayBatSoup()
 {
   lc.clearDisplay(0);// clear screen
-  lc.setChar(0,7,'B',false);
-  lc.setChar(0,6,'A',false);
-  lc.setRow(0,5,0x0F);
+  lc.setRow(0,7,0x1F);// b
+  lc.setRow(0,6,0x77);// A
+  lc.setRow(0,5,0x0F);// t
 
-  lc.setChar(0,3,'5',false);
-  lc.setChar(0,2,'0',false);
-  lc.setRow(0,1,0x3E);
-  lc.setChar(0,0,'P',false);
+  lc.setRow(0,3,0x5B);// S
+  lc.setRow(0,2,0x7E);// O
+  lc.setRow(0,1,0x3E);// U
+  lc.setRow(0,0,0x67);// P
 }
 
 void displayNumber(long int count)
@@ -53,8 +53,8 @@ void loop()
 {
   displayBatSoup();
   delay(2500);
-  displayNumber(casesCount);
-  delay(4000);
-  displayNumber(deathCount);
-  delay(4000);
+  // displayNumber(casesCount);
+  // delay(4000);
+  // displayNumber(deathCount);
+  // delay(4000);
 }
