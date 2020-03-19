@@ -53,8 +53,8 @@ void loop()
 {
   displayBatSoup();
   delay(2500);
-  // displayNumber(casesCount);
-  // delay(4000);
-  // displayNumber(deathCount);
-  // delay(4000);
+  displayNumber(casesCount);
+  delay(4000);
+  displayNumber(deathCount);
+  delay(4000);
 }
